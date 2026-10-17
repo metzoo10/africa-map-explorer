@@ -58,7 +58,7 @@ export class AfricaMap implements AfterViewInit, OnChanges {
     { id: 'MU', name: 'Maurice' },
     { id: 'SC', name: 'Seychelles' },
     { id: 'KM', name: 'Comores' },
-    { id: 'ST', name: 'Sao Tomé' }
+    { id: 'ST', name: 'Sao Tomé et Principé' }
   ];
 
   onSelectIsland(islandId: string): void {

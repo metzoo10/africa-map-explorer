@@ -20,7 +20,7 @@ export class App  implements OnInit {
   selectedCountry: CountryDetail | null = null;
 
   ngOnInit() {
-    this.http.get<Record<string, CountryDetail>>('countries.json').subscribe({
+    this.http.get<Record<string, CountryDetail>>('/assets/countries.json').subscribe({
       next: (data) => {
         this.countriesData = data;
       },

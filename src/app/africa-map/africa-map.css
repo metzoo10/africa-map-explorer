@@ -16,29 +16,25 @@
   max-height: 85vh;
 }
 
-/* Style de base pour tous les pays (contraste élevé) */
 svg path {
-  fill: #334e68 !important;       /* Bleu/gris foncé élégant et contrasté */
-  stroke: #ffffff !important;     /* Frontières blanches nettes */
-  stroke-width: 1px !important;   /* Épaisseur des traits */
+  fill: #334e68 !important;
+  stroke: #ffffff !important;
+  stroke-width: 1px !important;
   cursor: pointer;
   transition: fill 0.2s ease, opacity 0.2s ease;
 }
 
-/* Effet au survol de la souris */
 svg path:hover {
-  fill: #486581 !important;       /* Teinte légèrement plus claire au survol */
+  fill: #486581 !important;
   opacity: 0.95;
 }
 
-/* Style du pays lorsqu'il est sélectionné */
 svg path.selected {
-  fill: #ff7b7b !important;       /* Couleur vive pour mettre en valeur le pays sélectionné */
+  fill: #ff7b7b !important;
   stroke: #ffffff !important;
   stroke-width: 1.5px !important;
 }
 
-/* Style pour les petits pays insulaires représentés par des points */
 svg circle.island-node {
   fill: #334e68 !important;
   stroke: #ffffff !important;
@@ -58,7 +54,6 @@ svg circle.island-node.selected {
   stroke-width: 2px !important;
 }
 
-/* Style de l'encadré des îles */
 .islands-inset {
   position: absolute;
   bottom: 20px;
@@ -89,7 +84,6 @@ svg circle.island-node.selected {
   max-width: 200px;
 }
 
-/* Boutons des îles */
 .islands-grid button {
   background: #f1f5f9;
   border: 1px solid #cbd5e1;
@@ -108,22 +102,19 @@ svg circle.island-node.selected {
   border-color: #334e68;
 }
 
-/* État sélectionné de l'île */
 .islands-grid button.selected {
   background: #ff7b7b !important;
   color: #ffffff !important;
   border-color: #ff7b7b !important;
 }
 
-/* Adaptation de l'encadré des îles sur les petits écrans */
 @media (max-width: 768px) {
   .map-wrapper {
     flex-direction: column;
     padding: 10px;
-    overflow-y: auto; /* Permet de faire défiler si nécessaire */
+    overflow-y: auto;
   }
 
-  /* L'encadré des îles ne flotte plus par-dessus la carte, il se place en dessous */
   .islands-inset {
     position: relative !important;
     bottom: auto !important;
@@ -139,7 +130,6 @@ svg circle.island-node.selected {
     justify-content: flex-start;
   }
 
-  /* Ajustement de la taille des boutons pour le tactile */
   .islands-grid button {
     padding: 8px 12px;
     font-size: 0.85rem;
