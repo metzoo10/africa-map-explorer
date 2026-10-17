@@ -47,6 +47,7 @@ Ouvrez votre navigateur et accédez à http://localhost:4200/.
 
 ## 📁 Structure du projet
 
+```text
 src/
 ├── app/
 │   ├── components/
@@ -58,6 +59,7 @@ src/
 ├── public/
 │   └── fonts/               # Police Geist Mono
 └── assets/                  # Drapeaux et ressources graphiques
+```
 
 ## 🤝 Contribution
 
