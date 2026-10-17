@@ -1,0 +1,31 @@
+<div class="drawer" *ngIf="country">
+  <!-- En-tête du panneau -->
+  <div class="drawer-header">
+    <div class="country-title-area">
+      <img [src]="country.flagUrl" [alt]="country.name" class="flag-icon" />
+      <h2>{{ country.name }}</h2>
+    </div>
+    <button class="close-btn" (click)="close.emit()">×</button>
+  </div>
+
+  <!-- Description -->
+  <p class="description">{{ country.description }}</p>
+
+  <!-- Liste des informations -->
+  <div class="info-list">
+    <div><strong>Capitale :</strong> {{ country.capital }}</div>
+    <div><strong>Langue officielle :</strong> {{ country.officialLanguage }}</div>
+    <div><strong>Autres langues :</strong> {{ country.otherLanguages.join(', ') }}</div>
+    <div><strong>Superficie :</strong> {{ country.area }}</div>
+    <div><strong>Monnaie :</strong> {{ country.currency }}</div>
+    <div><strong>Population :</strong> {{ country.population.toLocaleString() }} habitants</div>
+    <div><strong>Plat national :</strong> {{ country.nationalDish }}</div>
+    <div><strong>Surnom :</strong> {{ country.surname }}</div>
+    <div>
+      <strong>Sites touristiques :</strong>
+      <ul>
+        <li *ngFor="let site of country.touristAttractions">{{ site }}</li>
+      </ul>
+    </div>
+  </div>
+</div>
